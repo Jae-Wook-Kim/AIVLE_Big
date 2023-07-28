@@ -34,18 +34,19 @@ import asyncio
 from threading import Thread
 import time
 from django.contrib.auth.hashers import make_password
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
+# sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
 
 # 07-02
 import json
-from asgiref.sync import async_to_sync 
-from .consumers import CaptionProcessingConsumer
-from channels.layers import get_channel_layer
+# from asgiref.sync import async_to_sync 
+# from .consumers import CaptionProcessingConsumer
+# from channels.layers import get_channel_layer
 
 
-from ai.barrier_free_caption_gen import *
-print()
-bfcg = BarrierFreeCaptionGenerator()
+# from ai.barrier_free_caption_gen import *
+# print()
+# bfcg = BarrierFreeCaptionGenerator()
+
 def upload_view(request):
     if request.method == 'POST':
         form = VideoForm(request.POST, request.FILES)
