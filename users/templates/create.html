@@ -17,7 +17,7 @@
                   <li><a href="/#hero">홈</a></li>
                   <li><a href="/#about">정보</a></li>
                   <li><a href="/#team">팀원</a></li>
-                  <li><a href="{% url 'user:blog' %}">자막 게시판</a></li>
+                  <li><a href="/blog">자막 게시판</a></li>
                   <li><a href="{% url 'user:upload' %}">자막 생성</a></li>
                   {% if user.is_authenticated %}
                     <li class="dropdown">
@@ -112,7 +112,7 @@
                 </div>  
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">돌아가기</button>
-                    <button type="button" class="btn btn-danger" onclick="window.location.href='{% url 'user:blog' %}'">네</button>
+                    <button type="button" class="btn btn-danger" onclick="window.location.href='/blog'">네</button>
                 </div>
             </div>
         </div>

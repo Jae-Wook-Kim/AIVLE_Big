@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
-from users.models import Post
+# from users.models import Post
+
+from blog.models import Post
 
 from .models import Reply
 from .forms import ReplyForm

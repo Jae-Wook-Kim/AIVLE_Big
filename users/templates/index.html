@@ -22,7 +22,7 @@
           <li><a href="#about">정보</a></li>
           <li><a href="#team">팀원</a></li>
           {% if user.is_authenticated %}
-          <li><a href="{% url 'user:blog' %}">자막 게시판</a></li>
+          <li><a href="/blog">자막 게시판</a></li>
           <li><a href="{% url 'user:upload' %}">자막 생성</a></li>
           <li class="dropdown"><a href="#"><span>{% if user.nickname %}{{ user.nickname }}{% else %}{{ user.username }}{% endif %}</span> <i class="bi bi-person-circle"></i></a>
             <ul>
@@ -32,7 +32,7 @@
             </ul>
           </li>
           {% else %}
-          <li><a href="{% url 'user:blog' %}" onclick="checkLogin()">자막 게시판</a></li>
+          <li><a href="/blog" onclick="checkLogin()">자막 게시판</a></li>
           <li><a href="{% url 'user:upload' %}" >자막 생성</a></li>
           <li><a href="" class="js-activation-button">로그인</a></li>
           {% endif %}
@@ -79,7 +79,7 @@
           <div class="col-xl-4 col-md-3" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-chat-square-text"></i></div>
-              <h4 class="title"><a href="{% url 'user:blog' %}" class="stretched-link" onclick="checkLogin()">자막 공유 , 다운로드</a></h4>
+              <h4 class="title"><a href="/blog" class="stretched-link" onclick="checkLogin()">자막 공유 , 다운로드</a></h4>
             </div>
           </div><!--End Icon Box -->
 
@@ -164,7 +164,7 @@
               </div>
               <h3>자막을 공유하거나 다운로드 받으세요!</h3>
               <p>생성된 자막을 다른 유저에게 공유 하시거나, 다른 유저가 공유한 자막을 다운로드 받으세요!</p>
-              <a href="{% url 'user:blog' %}" class="readmore stretched-link" onclick="checkLogin()">구경 하러 가기~! <i class="bi bi-arrow-right"></i></a>
+              <a href="/blog" class="readmore stretched-link" onclick="checkLogin()">구경 하러 가기~! <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
         </div>

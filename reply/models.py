@@ -1,5 +1,6 @@
 from django.db import models
-from users.models import User, Post
+from users.models import User
+from blog.models import Post
 
 # Create your models here.
 class Reply(models.Model):

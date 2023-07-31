@@ -14,7 +14,7 @@
             <li><a href="/#hero">홈</a></li>
             <li><a href="/#about">정보</a></li>
             <li><a href="/#team">팀원</a></li>
-            <li><a href="{% url 'user:blog' %}">자막 게시판</a></li>
+            <li><a href="/blog">자막 게시판</a></li>
             <li><a href="{% url 'user:upload' %}">자막 생성</a></li>
             {% if user.is_authenticated %}
               <li class="dropdown">
@@ -111,7 +111,7 @@
                 <td>{{ forloop.counter }}</td>
                 <td>
                   <div class="d-flex align-items-center">
-                    <a href="{% url 'user:blogdt' list.id %}" class="post-link"><span class="post-title">{{ list.title }}</span></a>
+                    <a href="{% url 'blog:blogdt' list.id %}" class="post-link"><span class="post-title">{{ list.title }}</span></a>
                   </div>
                 </td>
                 <td>{{ list.author }}</td>
@@ -129,7 +129,7 @@
           </table>
         </div>
         <div class="container text-end mt-3" style="margin-left:400px;">
-          <button class="btn btn-primary" onclick="window.location.href='{% url 'user:create' %}'">작성하기</button>
+          <button class="btn btn-primary" onclick="window.location.href='create/'">작성하기</button>
         </div>
         <div class="pagination justify-content-center">
           <ul class="pagination">
