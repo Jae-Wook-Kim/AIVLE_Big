@@ -17,8 +17,8 @@ from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.decorators import login_required
 
-from reply.forms import ReplyForm
-from reply.models import Reply
+# from blog.forms import ReplyForm
+# from blog.models import Reply
 
 from blog.models import Post
 
